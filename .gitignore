@@ -1,0 +1,27 @@
+
+# dependencies
+node_modules/
+
+# build output
+dist/
+coverage/
+
+# secrets: never commit these
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets/
+
+# logs and OS files
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# editors
+.idea/
+*.swp
+'@ | Set-Content -Path .gitignore -Encoding utf8
