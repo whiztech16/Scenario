@@ -1,0 +1,19 @@
+scenario "Create a post"
+
+POST /posts
+
+body:
+  title: Learning Scenario
+  userId: 1
+
+expect:
+  status: 201
+  body.title: Learning Scenario
+  body.userId: 1
+
+scenario "Unknown todo returns 404"
+
+GET /todos/999999
+
+expect:
+  status: 404
